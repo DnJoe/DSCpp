@@ -1,0 +1,19 @@
+
+* CPP相关
+** 界定符
+*** 类的三种界定符的区别https://blog.csdn.net/scottly1/article/details/24354489
+*** const的作用https://blog.csdn.net/Eric_Jo/article/details/4138548 
+    https://www.cnblogs.com/jiabei521/p/3335676.html
+** 类
+*** 类的同名函数，如果参数情况不同，则视为不同函数，如可以有多种构造函数
+*** 类的定义：class Xxx {  };注意最后的分号不能省略
+** 奇怪的小知识
+*** .gch文件
+**** gcc  会先将.h头文件预编译成为 .h.gch文件,以便下次编译时能够更快,将会将.h.gch文件自动载入
+**** 但我们修改了文件头的 .h  文件, gcc仍旧会编译原来的 .h.gch  文件,  不会载入新修改的文件头,  仍旧很容易造成错误
+**** 我们只需要将 Makefile文件  的  clean 目标项  修改为   rm -f *.o *.h.gch  ,  然后在重新编译就好.....
+
+
+
+* 疑问
+** 为什么size_用Rank而capacity_用int
